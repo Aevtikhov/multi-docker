@@ -1,6 +1,6 @@
 {
   "AWSEBDockerrunVersion": 2,
-  "containerDefinition": [
+  "containerDefinitions": [
     {
       "name": "client",
       "image": "vokidoki130/multi-client",
@@ -36,7 +36,5 @@
       "links": ["client", "server"],
       "memory": 128
     }
-
   ]
-
 }
