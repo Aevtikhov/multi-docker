@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-   name: client-deployment
+   name: worker-deployment
 spec:
-   replicas: 3
+   replicas: 1
    selector:
        matchLabels:
-         component: web
+         component: worker
    template:
      metadata:
         labels:
-         component: web
+         component: worker
      spec:
         containers:
-          - name: client
-            image: vokidoki130/multi-client
+          - name: worker
+            image: vokidoki130/multi-worker
             ports:
                - containerPort: 3000
 
